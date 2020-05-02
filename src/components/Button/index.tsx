@@ -4,8 +4,8 @@ import { Container } from './styles';
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
-  <Container {...rest} type="button">
+const Button: React.FC<ButtonProps> = ({ children, type, ...rest }) => (
+  <Container {...rest} type={type || 'button'}>
     {children}
   </Container>
 );
